@@ -1,0 +1,4 @@
+
+FROM logstash:8.11.3
+COPY logstash-config.conf /usr/share/logstash/pipeline/logstash-config.conf
+CMD ["bin/logstash", "-f", "/usr/share/logstash/pipeline/logstash-config.conf"]
